@@ -75,8 +75,8 @@ data "aws_iam_policy_document" "lambda" {
     resources = [aws_sqs_queue.dispatch.arn]
   }
   statement {
-    actions   = ["dynamodb:PutItem", "dynamodb:GetItem"]
-    resources = [aws_dynamodb_table.shipments.arn]
+    actions   = ["dynamodb:*"]
+    resources = ["*"]
   }
 }
 
