@@ -1,0 +1,16 @@
+name: Diffseal
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  diffseal:
+    # The trusted reusable workflow reviews the change, comments on the pull
+    # request and uploads the change record to the Diffseal evidence service.
+    uses: diffseal/diffseal/.github/workflows/upload.yml@v0.6.1-beta
