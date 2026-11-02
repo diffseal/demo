@@ -91,7 +91,7 @@ resource "aws_lambda_function" "fulfillment" {
   package_type  = "Image"
   image_uri     = "123456789012.dkr.ecr.eu-north-1.amazonaws.com/acme-fulfillment:latest"
   memory_size   = 512
-  timeout       = 15
+  timeout       = 30
 
   environment {
     variables = {
