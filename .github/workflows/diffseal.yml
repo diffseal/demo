@@ -13,4 +13,4 @@ jobs:
   diffseal:
     # The trusted reusable workflow reviews the change, comments on the pull
     # request and uploads the change record to the Diffseal evidence service.
-    uses: diffseal/diffseal/.github/workflows/upload.yml@v0.6.3-beta
+    uses: diffseal/diffseal/.github/workflows/upload.yml@v0.6.5-beta
