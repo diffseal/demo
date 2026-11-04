@@ -40,10 +40,10 @@ resource "aws_sqs_queue" "dispatch" {
 resource "aws_dynamodb_table" "shipments" {
   name         = "${local.name}-shipments"
   billing_mode = "PAY_PER_REQUEST"
-  hash_key     = "shipment_id"
+  hash_key     = "tracking_number"
 
   attribute {
-    name = "shipment_id"
+    name = "tracking_number"
     type = "S"
   }
 
